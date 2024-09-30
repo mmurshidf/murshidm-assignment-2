@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KMeans Clustering Algorithm</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/script.js"></script>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>KMeans Clustering Algorithm</h1>
+        <div class="buttons">
+            <label class="cluster" for="clusterCountInput">Clusters(k):</label>
+            <input type="number" id="clusterCountInput" min="1" max="10" value="3">
+            <select id="initializationMethodSelect">
+                <option value="random">Random</option>
+                <option value="farthest_first">Farthest First</option>
+                <option value="kmeans++">KMeans++</option>
+                <option value="manual">Manual</option>
+            </select>
+            <button id="stepButton">Step</button>
+            <button id="convergeButton">Converge</button>
+            <button id="generateDataButton">Generate Data</button>
+            <button id="resetButton">Reset</button>
+        </div>
+        <canvas id="kMeansChartCanvas"></canvas>
+    </div>
+    <div id="statusMessage">Waiting</div>
+</body>
+</html>
